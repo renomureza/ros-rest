@@ -1,0 +1,38 @@
+{
+  "name": "ros-rest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "R.M Reza",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepare": "npx husky install"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "jest": "^27.2.4"
+  },
+  "homepage": "https://github.com/renomureza/ros-rest#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renomureza/ros-rest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/renomureza/ros-rest/issues"
+  },
+  "description": "Make an HTTP request (REST API) from Node.js to RouterOS.",
+  "keywords": [
+    "mikrotik",
+    "routeros",
+    "routeros-api",
+    "mikrotik-routeros-api",
+    "mikrotik-api",
+    "routeros-node",
+    "routeros-wrapper",
+    "mikrotik-router",
+    "routeros-client"
+  ]
+}
