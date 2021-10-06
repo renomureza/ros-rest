@@ -110,7 +110,7 @@ clientRosRest
 ```js
 const fetchRouterOS = async () => {
   try {
-    const res = await clientRosRest.get('ip/address');
+    const res = await clientRosRest.print('ip/address');
     console.log('result:', res);
   } catch (err) {
     console.log('error:', err);
