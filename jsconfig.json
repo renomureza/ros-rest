@@ -5,5 +5,5 @@
     "target": "es2020",
     "module": "commonJS"
   },
-  "exclude": ["node_modules", ".vscode", "coverage", ".npm", ".yarn", ".husky"]
+  "exclude": ["node_modules", ".npm", ".yarn"]
 }

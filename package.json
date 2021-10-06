@@ -1,20 +1,14 @@
 {
   "name": "ros-rest",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "R.M Reza",
   "license": "MIT",
-  "scripts": {
-    "test": "jest -i",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "prepare": "npx husky install"
+  "scripts": {},
+  "dependencies": {
+    "axios": "^0.22.0"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "dotenv": "^10.0.0",
-    "jest": "^27.2.4"
-  },
+  "devDependencies": {},
   "homepage": "https://github.com/renomureza/ros-rest#readme",
   "repository": {
     "type": "git",

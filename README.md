@@ -84,7 +84,7 @@ Here's a list of the methods we can use that the `rosRest` function returns:
 
 | HTTP   | RouterOS | ROS REST | Description                                             |
 | ------ | -------- | -------- | ------------------------------------------------------- |
-| GET    | print    | get      | To get the records.                                     |
+| GET    | print    | print    | To get the records.                                     |
 | PUT    | add      | add      | To update a single record.                              |
 | PATCH  | set      | set      | To create a new record.                                 |
 | DELETE | remove   | remove   | To delete a single record.                              |
@@ -122,26 +122,31 @@ const fetchRouterOS = async () => {
 fetchRouterOS();
 ```
 
-### `get`
+For error handling and response schema, see the Axios documentation:
+
+- [Error Handling](https://axios-http.com/docs/handling_errors)
+- [Response Schema](https://axios-http.com/docs/res_schema)
+
+### `print`
 
 Example of retrieving all IP Address data (Winbox: IP > Address):
 
 ```js
-clientRosRest.get('ip/address');
+clientRosRest.print('ip/address');
 ```
 
 Fetch by id, ether, or by a property containing a specific value:
 
 ```js
-clientRosRest.get('ip/address/*2');
-clientRosRest.get('ip/address/ether1');
-clientRosRest.get('ip/address?network=10.155.101.0&dynamic=true');
+clientRosRest.print('ip/address/*2');
+clientRosRest.print('ip/address/ether1');
+clientRosRest.print('ip/address?network=10.155.101.0&dynamic=true');
 ```
 
 If we only need certain properties, use `.proplist`:
 
 ```js
-clientRosRest.get('ip/address?.proplist=address,disabled');
+clientRosRest.print('ip/address?.proplist=address,disabled');
 ```
 
 ### `add`

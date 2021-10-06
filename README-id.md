@@ -82,7 +82,7 @@ Berikut daftar method yang bisa kita gunakan yang dikembalikan fungsi `rosRest`:
 
 | HTTP   | RouterOS | ROS REST | Description                              |
 | ------ | -------- | -------- | ---------------------------------------- |
-| GET    | print    | get      | untuk mengambil data                     |
+| GET    | print    | print    | untuk mengambil data                     |
 | PUT    | add      | add      | untuk membuat data baru                  |
 | PATCH  | set      | set      | untuk mempebarui data                    |
 | DELETE | remove   | remove   | untuk menghapus data                     |
@@ -120,26 +120,31 @@ const fetchRouterOS = async () => {
 fetchRouterOS();
 ```
 
-### `get`
+Untuk error handling dan response schema, lihat dokumentasi Axios:
+
+- [Error Handling](https://axios-http.com/docs/handling_errors)
+- [Response Schema](https://axios-http.com/docs/res_schema)
+
+### `print`
 
 Contoh mengambil semua data IP Address (Winbox: IP > Address):
 
 ```js
-clientRosRest.get('ip/address');
+clientRosRest.print('ip/address');
 ```
 
 Ambil berdasarkan id, ehter, atau berdasarkan properti yang berisi nilai tertentu:
 
 ```js
-clientRosRest.get('ip/address/*2');
-clientRosRest.get('ip/address/ether1');
-clientRosRest.get('ip/address?network=10.155.101.0&dynamic=true');
+clientRosRest.print('ip/address/*2');
+clientRosRest.print('ip/address/ether1');
+clientRosRest.print('ip/address?network=10.155.101.0&dynamic=true');
 ```
 
 Jika kita hanya memerlukan properti tertentu, gunakan `.proplist`:
 
 ```js
-clientRosRest.get('ip/address?.proplist=address,disabled');
+clientRosRest.print('ip/address?.proplist=address,disabled');
 ```
 
 ### `add`
