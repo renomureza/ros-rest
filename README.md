@@ -98,7 +98,7 @@ All methods return a Promise, we can handle it using `then/catch` or `try/catch`
 
 ```js
 clientRosRest
-  .get('ip/address')
+  .print('ip/address')
   .then((res) => {
     console.log('result:', res);
   })

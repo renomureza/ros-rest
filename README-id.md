@@ -96,7 +96,7 @@ Semua method mengembalikan Promise, kita bisa menanganinya menggunakan `then/cat
 
 ```js
 clientRosRest
-  .get('ip/address')
+  .print('ip/address')
   .then((res) => {
     console.log('result:', res);
   })
